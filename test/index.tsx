@@ -6,6 +6,7 @@ import {
 } from '@testing-library/react';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { StyledThemeProvider } from '@definitions/styled-components';
 
 /**
  * Custom renderer example with @testing-library/react
@@ -19,9 +20,9 @@ export const AllTheProviders = ({ children }) => {
   const queryClient = new QueryClient();
 
   return (
-    <>
+    <StyledThemeProvider>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </>
+    </StyledThemeProvider>
   );
 };
 

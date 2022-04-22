@@ -4,7 +4,7 @@ import { Avatar } from './index';
 
 describe('Avatar component test', () => {
   it('renders without crashing', () => {
-    const component = render(<Avatar src="" onClick={() => undefined} />);
+    const component = render(<Avatar src="" />);
 
     expect(component).toBeTruthy();
   });
