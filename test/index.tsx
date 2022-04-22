@@ -1,11 +1,11 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react';
 import {
-    render as baseRender,
-    RenderOptions,
-    RenderResult,
-} from "@testing-library/react";
+  render as baseRender,
+  RenderOptions,
+  RenderResult,
+} from '@testing-library/react';
 
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 /**
  * Custom renderer example with @testing-library/react
@@ -16,22 +16,20 @@ import { QueryClient, QueryClientProvider } from "react-query";
  */
 
 export const AllTheProviders = ({ children }) => {
-    const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
-    return (
-        <>
-            <QueryClientProvider client={queryClient}>
-                {children}
-            </QueryClientProvider>
-        </>
-    );
+  return (
+    <>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </>
+  );
 };
 
-const render = (ui: ReactElement, options?: Omit<RenderOptions, "queries">) =>
-    baseRender(ui, { wrapper: AllTheProviders, ...options }) as RenderResult;
+const render = (ui: ReactElement, options?: Omit<RenderOptions, 'queries'>) =>
+  baseRender(ui, { wrapper: AllTheProviders, ...options }) as RenderResult;
 
 // re-export everything
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 
 // override render method
 export { render };
