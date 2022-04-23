@@ -3,6 +3,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
 import { Button } from './index';
 import { Space } from 'antd-mobile';
+import styled from 'styled-components';
 
 export default {
   title: 'Button',
@@ -10,50 +11,38 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Variant = () => (
-  <Space direction="vertical">
-    <Button block color="primary" size="large">
-      Block Button
-    </Button>
+const Background = styled(Space)`
+  padding: 20px;
+  transition: all 0.2s ease;
+  background: ${(props) => props.theme.colors.cardsBg};
+`;
 
+export const Variant = () => (
+  <Background direction="vertical">
     <Space wrap>
-      <Button color="primary" fill="solid">
-        Solid
-      </Button>
-      <Button color="primary" fill="outline">
-        Outline
-      </Button>
-      <Button color="primary" fill="none">
-        None
-      </Button>
+      <Button variant="solid">Solid</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="none">None</Button>
     </Space>
 
     <Space wrap align="center">
-      <Button size="mini" color="primary">
-        Mini
-      </Button>
-      <Button size="small" color="primary">
-        Small
-      </Button>
-      <Button size="middle" color="primary">
-        Middle
-      </Button>
-      <Button size="large" color="primary">
-        Large
-      </Button>
+      <Button size="mini">Mini</Button>
+      <Button size="small">Small</Button>
+      <Button size="middle">Middle</Button>
+      <Button size="large">Large</Button>
     </Space>
-  </Space>
+  </Background>
 );
 
 export const Custom = () => {
   const label = text('label', 'Submit');
-  const fill = select('fill', ['solid', 'outline', 'none'], 'solid');
+  const variant = select('variant', ['solid', 'outline', 'none'], 'solid');
   const size = select('size', ['mini', 'small', 'middle', 'large'], 'middle');
   const disabled = boolean('disabled', false);
   const loading = boolean('loading', false);
 
   return (
-    <Button fill={fill} size={size} disabled={disabled} loading={loading}>
+    <Button variant={variant} size={size} disabled={disabled} loading={loading}>
       {label}
     </Button>
   );
