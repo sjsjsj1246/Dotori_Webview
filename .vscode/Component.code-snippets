@@ -1,0 +1,20 @@
+{
+	"Define Component": {
+		"prefix": "dc",
+		"body": [
+			"import React from 'react';",
+			"import styled from 'styled-components';",
+			"import { color } from 'styled-system';",
+			"",
+			"const Styled${1} = styled()`",
+			"`;",
+			"",
+			"export const ${1}: React.FC<${1}Props> = ({",
+			"...rest",
+			"}) => {",
+			"return <Styled${1} {...rest} data-testid='${2}' />;",
+			"};"
+		],
+		"description": "컴포넌트를 작성하는 용도입니다."
+	}
+}
