@@ -1,0 +1,27 @@
+{
+	"Define Component": {
+		"prefix": "ds",
+		"body": [
+			"import React from 'react';",
+			"import { withKnobs, text, select } from '@storybook/addon-knobs';",
+			"",
+			"import { ${1} } from './index';",
+			"import { List, Space } from 'antd-mobile';",
+			"",
+			"export default {",
+			"title: '${1}',",
+			"component: ${1},",
+			"decorators: [withKnobs],",
+			"};",
+			"",
+			"export const Variant = () => (",
+			"<>",
+			"</>",
+			");",
+			"",
+			"export const Custom = () => {",
+			"};",
+		],
+		"description": "스토리를 작성하는 용도입니다."
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"Define Component": {
+		"prefix": "dct",
+		"body": [
+			"import { render } from '@test';",
+			"",
+			"import { ${1} } from './index';",
+			"",
+			"describe('${1} component test', () => {",
+			"it('renders without crashing', () => {",
+			"const component = render(<${1}/>);",
+			"",
+			"expect(component).toBeTruthy();",
+			"});",
+			"});",
+		],
+		"description": "컴포넌트 테스트를 작성하는 용도입니다."
+	}
+}

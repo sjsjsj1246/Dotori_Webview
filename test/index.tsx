@@ -8,14 +8,6 @@ import {
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { StyledThemeProvider } from '@definitions/styled-components';
 
-/**
- * Custom renderer example with @testing-library/react
- * You can customize it to your needs.
- *
- * To learn more about customizing renderer,
- * please visit https://testing-library.com/docs/react-testing-library/setup
- */
-
 export const AllTheProviders = ({ children }) => {
   const queryClient = new QueryClient();
 
