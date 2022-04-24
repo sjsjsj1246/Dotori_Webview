@@ -7,12 +7,12 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from 'antd-mobile-icons';
-import { BottomTab } from './index';
+import { TabBar } from './';
 import { Badge, Space } from 'antd-mobile';
 
 export default {
-  title: 'BottomTab',
-  component: BottomTab,
+  title: 'TabBar',
+  component: TabBar,
   decorators: [withKnobs],
 };
 
@@ -51,68 +51,56 @@ export const Variant = () => {
       style={{ padding: '10px', backgroundColor: '#efefef' }}
     >
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab>
+        <TabBar>
           {tabs.map((item) => (
-            <BottomTab.Item
-              key={item.key}
-              icon={item.icon}
-              title={item.title}
-            />
+            <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
 
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab>
+        <TabBar>
           {tabs.map((item) => (
-            <BottomTab.Item
+            <TabBar.Item
               key={item.key}
               icon={item.icon}
               title={item.title}
               badge={item.badge}
             />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
 
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab>
+        <TabBar>
           {tabs.map((item) => (
-            <BottomTab.Item key={item.key} icon={item.icon} />
+            <TabBar.Item key={item.key} icon={item.icon} />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
 
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab>
+        <TabBar>
           {tabs.map((item) => (
-            <BottomTab.Item key={item.key} title={item.title} />
+            <TabBar.Item key={item.key} title={item.title} />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
 
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab activeKey={activeKey} onChange={setActiveKey}>
+        <TabBar activeKey={activeKey} onChange={setActiveKey}>
           {tabs.map((item) => (
-            <BottomTab.Item
-              key={item.key}
-              icon={item.icon}
-              title={item.title}
-            />
+            <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
 
       <Space style={{ backgroundColor: '#FFFFFF' }}>
-        <BottomTab safeArea>
+        <TabBar safeArea>
           {tabs.map((item) => (
-            <BottomTab.Item
-              key={item.key}
-              icon={item.icon}
-              title={item.title}
-            />
+            <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
           ))}
-        </BottomTab>
+        </TabBar>
       </Space>
     </Space>
   );

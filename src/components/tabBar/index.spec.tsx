@@ -1,13 +1,13 @@
 import { render } from '@test';
 
-import { BottomTab } from './index';
+import { TabBar } from './';
 
-describe('BottomTab component test', () => {
+describe('TabBar component test', () => {
   it('renders without crashing', () => {
     const component = render(
-      <BottomTab>
-        <BottomTab.Item />
-      </BottomTab>,
+      <TabBar>
+        <TabBar.Item />
+      </TabBar>,
     );
 
     expect(component).toBeTruthy();
