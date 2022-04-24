@@ -33,5 +33,5 @@ const StyledButton = styled(AntdButton)`
 `;
 
 export const Button: React.FC<ButtonProps & ColorProps> = ({ ...rest }) => {
-  return <StyledButton {...rest} data-testid="btn" />;
+  return <StyledButton {...rest} data-testid="button" />;
 };

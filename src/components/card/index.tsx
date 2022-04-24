@@ -17,7 +17,7 @@ export const Card: React.FC<CardProps & typeof StyledCard> = ({
   ...rest
 }) => {
   return (
-    <StyledCard title={title} {...rest}>
+    <StyledCard title={title} {...rest} data-testid="card">
       {children}
     </StyledCard>
   );

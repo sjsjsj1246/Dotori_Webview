@@ -9,5 +9,5 @@ const StyledAvatar = styled(AntdAvatar)`
 `;
 
 export const Avatar: React.FC<AvatarProps & LayoutProps> = ({ ...rest }) => {
-  return <StyledAvatar {...rest} data-testid="btn" />;
+  return <StyledAvatar {...rest} data-testid="avatar" />;
 };

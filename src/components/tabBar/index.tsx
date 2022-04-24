@@ -15,7 +15,7 @@ const StyledTabBar = styled(AntdTabBar)`
 export const TabBar: React.FC<TabBarProps> & {
   Item: React.FC<TabBarItemProps>;
 } = ({ ...rest }) => {
-  return <StyledTabBar {...rest} data-testid="bottom-tab" />;
+  return <StyledTabBar {...rest} data-testid="tabBar" />;
 };
 
 TabBar.Item = AntdTabBar.Item;

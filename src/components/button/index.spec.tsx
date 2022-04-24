@@ -13,7 +13,7 @@ describe('Button component test', () => {
     const mockFn = jest.fn();
     const { getByTestId } = render(<Button onClick={mockFn} />);
 
-    const btn = getByTestId('btn');
+    const btn = getByTestId('button');
     fireEvent.click(btn);
 
     expect(mockFn).toHaveBeenCalledTimes(1);
