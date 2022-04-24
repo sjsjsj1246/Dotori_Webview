@@ -10,7 +10,7 @@ const StyledSwiper = styled(AntdSwiper)`
 
 export const Swiper: React.FC<SwiperProps> & {
   Item: any;
-  ref: React.MutableRefObject<SwiperRef>;
+  ref?: React.MutableRefObject<SwiperRef>;
 } = ({ ...rest }) => {
   return <StyledSwiper {...rest} data-testid="swiper" />;
 };

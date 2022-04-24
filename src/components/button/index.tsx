@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { color, variant } from 'styled-system';
 import { Button as AntdButton } from 'antd-mobile';
-import { ButtonProps } from 'antd-mobile/es/components/button';
+import { ButtonProps as AntdButtonProps } from 'antd-mobile/es/components/button';
 
 const StyledButton = styled(AntdButton)`
   ${color}
@@ -32,6 +32,11 @@ const StyledButton = styled(AntdButton)`
     })}
 `;
 
-export const Button: React.FC<ButtonProps & ColorProps> = ({ ...rest }) => {
+type ButtonProps = AntdButtonProps &
+  ColorProps & {
+    variant?: 'solid' | 'outline' | 'none';
+  };
+
+export const Button: React.FC<ButtonProps> = ({ ...rest }) => {
   return <StyledButton {...rest} data-testid="button" />;
 };
