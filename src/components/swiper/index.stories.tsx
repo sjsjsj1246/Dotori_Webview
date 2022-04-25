@@ -1,9 +1,10 @@
 import React, { FC, useRef, useState } from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import { List, Space, Toast, Swiper, Popup } from 'antd-mobile';
+import { List, Space, Toast, Popup } from 'antd-mobile';
 import { Button } from '..';
 import { SwiperRef } from 'antd-mobile/es/components/swiper';
+import { Swiper } from '.';
 
 export default {
   title: 'Swiper',
@@ -72,7 +73,7 @@ export const Variant = () => {
 
       <Space direction="vertical" block>
         <p>with button</p>
-        <Swiper allowTouchMove={false} ref={ref} loop>
+        <Swiper allowTouchMove={false} forwardRef={ref} loop>
           {items}
         </Swiper>
         <Space>

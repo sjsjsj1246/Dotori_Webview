@@ -8,11 +8,14 @@ const StyledSwiper = styled(AntdSwiper)`
   ${layout}
 `;
 
-export const Swiper: React.FC<SwiperProps> & {
+export const Swiper: React.FC<
+  SwiperProps & {
+    forwardRef?: React.MutableRefObject<SwiperRef>;
+  }
+> & {
   Item: any;
-  ref?: React.MutableRefObject<SwiperRef>;
-} = ({ ...rest }) => {
-  return <StyledSwiper {...rest} data-testid="swiper" />;
+} = ({ forwardRef, ...rest }) => {
+  return <StyledSwiper {...rest} ref={forwardRef} data-testid="swiper" />;
 };
 
 Swiper.Item = AntdSwiper.Item;
