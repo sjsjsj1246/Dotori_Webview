@@ -2,6 +2,7 @@ import { TabBar } from '@components/tabBar';
 import { Button } from '@components/button';
 import React from 'react';
 import { BottomTab } from '@components/bottomTab';
+import { Header } from '@components/header';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Home: React.FC = () => {
         height: '100%',
       }}
     >
-      <div>헤더</div>
+      <Header>헤더</Header>
       <div style={{ flex: 1 }}>DM</div>
       <BottomTab />
     </div>

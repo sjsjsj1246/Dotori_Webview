@@ -25,7 +25,7 @@ const tabs = [
       active ? <PictureFilled /> : <PictureOutlined />,
   },
   {
-    key: '',
+    key: 'plus',
     icon: <PlusCircleFilled />,
   },
   {
