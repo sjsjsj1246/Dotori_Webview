@@ -25,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #__next {
-    width: 360px;
-    height: 640px;
+    width: 100%;
+    height: 100%;
     background: white;
   }
 `;
