@@ -45,21 +45,21 @@ const StyledTabBar = styled(TabBar)`
   .adm-tab-bar-item:nth-child(3) {
     .adm-badge-wrap {
       position: fixed;
-      bottom: 35px;
+      bottom: 45px;
     }
 
     svg {
-      width: 50px;
-      height: 50px;
+      width: 3rem;
+      height: 3rem;
       color: #353535;
     }
   }
 
   svg {
     position: relative;
-    top: -5px;
-    width: 25px;
-    height: 25px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
   }
 `;
 

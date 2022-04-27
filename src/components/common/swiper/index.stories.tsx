@@ -61,6 +61,30 @@ export const Variant = () => {
   return (
     <>
       <Space direction="vertical" block>
+        <Swiper trackOffset={10} stuckAtBoundary={false} loop>
+          {colors.map((color, index) => (
+            <Swiper.Item key={index}>
+              <div
+                style={{
+                  width: '80%',
+                  height: '300px',
+                  color: '#ffffff',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '48px',
+                  userSelect: 'none',
+                  background: color,
+                }}
+              >
+                {index + 1}
+              </div>
+            </Swiper.Item>
+          ))}
+        </Swiper>
+      </Space>
+
+      <Space direction="vertical" block>
         <Swiper
           style={{
             '--border-radius': '8px',

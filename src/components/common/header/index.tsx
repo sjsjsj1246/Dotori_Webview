@@ -10,15 +10,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 
   p {
-    font-size: 2rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
   }
 
   svg {
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 `;
 
@@ -26,7 +27,7 @@ export const Header: FC = () => {
   return (
     <Wrapper>
       <MenuOutlined />
-      <p>dotori</p>
+      <p>DOTORI</p>
       <Avatar
         src="https://images.unsplash.com/photo-1548532928-b34e3be62fc6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
         style={{

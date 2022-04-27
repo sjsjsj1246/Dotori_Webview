@@ -7,7 +7,7 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from 'antd-mobile-icons';
-import { TabBar } from '.';
+import { TabBar } from 'antd-mobile';
 import { Badge, Space } from 'antd-mobile';
 
 export default {
