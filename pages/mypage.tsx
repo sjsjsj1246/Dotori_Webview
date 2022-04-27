@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-const MyPage: FC = () => {
+const MyPageScreen: FC = () => {
   return <div>mypage</div>;
 };
 
-export default MyPage;
+export default MyPageScreen;

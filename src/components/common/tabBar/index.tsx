@@ -10,6 +10,9 @@ const StyledTabBar = styled(AntdTabBar)`
   .adm-tab-bar-item-active {
     color: black;
   }
+  .adm-badge-wrap {
+    position: fixed;
+  }
 `;
 
 export const TabBar: React.FC<TabBarProps> & {

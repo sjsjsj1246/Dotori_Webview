@@ -7,3 +7,4 @@ export { Swiper } from './swiper';
 
 //styled component
 export { Header } from './header';
+export { BottomTab } from './bottomTab';

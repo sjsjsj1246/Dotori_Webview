@@ -1,10 +1,8 @@
-import { TabBar } from '@components/tabBar';
-import { Button } from '@components/button';
 import React from 'react';
-import { BottomTab } from '@components/bottomTab';
-import { Header } from '@components/header';
+import { Header } from '@components/common/header';
+import { BottomTab } from '@components/common';
 
-const Home: React.FC = () => {
+const DMScreen: React.FC = () => {
   return (
     <div
       style={{
@@ -21,4 +19,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default DMScreen;

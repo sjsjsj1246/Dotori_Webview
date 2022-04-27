@@ -1,6 +1,6 @@
 import { render } from '@test';
 
-import { TabBar } from './';
+import { TabBar } from '.';
 
 describe('TabBar component test', () => {
   it('renders without crashing', () => {

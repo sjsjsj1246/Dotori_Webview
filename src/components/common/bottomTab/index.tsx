@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import { TabBar } from '..';
+import { TabBar } from 'antd-mobile';
 import {
   HomeFilled,
   HomeOutlined,
@@ -11,7 +11,6 @@ import {
   ShoppingFilled,
   ShoppingOutlined,
 } from '@ant-design/icons';
-import { TabBarItemProps } from 'antd-mobile/es/components/tab-bar';
 import { useRouter } from 'next/router';
 
 const tabs = [
@@ -25,7 +24,7 @@ const tabs = [
       active ? <PictureFilled /> : <PictureOutlined />,
   },
   {
-    key: 'plus',
+    key: '',
     icon: <PlusCircleFilled />,
   },
   {
@@ -39,11 +38,36 @@ const tabs = [
   },
 ];
 
+const StyledTabBar = styled(TabBar)`
+  .adm-tab-bar-item-active {
+    color: #353535;
+  }
+  .adm-tab-bar-item:nth-child(3) {
+    .adm-badge-wrap {
+      position: fixed;
+      bottom: 35px;
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+      color: #353535;
+    }
+  }
+
+  svg {
+    position: relative;
+    top: -5px;
+    width: 25px;
+    height: 25px;
+  }
+`;
+
 export const BottomTab: React.FC = () => {
   const router = useRouter();
 
   return (
-    <TabBar
+    <StyledTabBar
       activeKey={router.pathname}
       data-testid="bottomTab"
       onChange={(path) => router.push(path)}
@@ -51,6 +75,6 @@ export const BottomTab: React.FC = () => {
       {tabs.map((item) => (
         <TabBar.Item key={item.key} icon={item.icon} />
       ))}
-    </TabBar>
+    </StyledTabBar>
   );
 };
