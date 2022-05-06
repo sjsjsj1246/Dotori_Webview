@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
   *::before {
     box-sizing: border-box;
   }
+
+  p, h1, h2, h3, h4, h5 {
+    margin: 0;
+  }
   
   html {
     width: 100%;
@@ -17,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Bold, -apple-system, sans-serif;
+    font-family: medium, -apple-system, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;

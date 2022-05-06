@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { BottomTab } from '@components/common/bottomTab';
 import { Swiper } from '@components/common/swiper';
 import { Header } from '@components/common/header';
 import GalleryItem from './GalleryItem';
+import styled from 'styled-components';
 
 const Home: FC = () => {
   const [galleryItems, setGalleryItems] = useState([
@@ -44,37 +45,11 @@ const Home: FC = () => {
     );
   };
 
-  useEffect(() => {
-    console.log(galleryItems);
-  }, [galleryItems]);
-
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        width: '100%',
-        height: '100%',
-      }}
-    >
+    <Wrapper>
       <Header />
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#FAFAFA',
-        }}
-      >
-        <Swiper
-          style={{
-            width: '100%',
-            height: '100%',
-            borderRadius: '15px',
-          }}
+      <MainSection>
+        <StyledSwiper
           indicator={() => null}
           trackOffset={5}
           stuckAtBoundary={false}
@@ -92,11 +67,34 @@ const Home: FC = () => {
               />
             </Swiper.Item>
           ))}
-        </Swiper>
-      </div>
+        </StyledSwiper>
+      </MainSection>
       <BottomTab />
-    </div>
+    </Wrapper>
   );
 };
 
 export default Home;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`;
+
+const MainSection = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+`;
+
+const StyledSwiper = styled(Swiper)`
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+`;
