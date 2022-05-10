@@ -1,3 +1,4 @@
+import { InstagramOutlined, TwitterOutlined } from '@ant-design/icons';
 import { Button } from '@components/common';
 import { FC } from 'react';
 import styled from 'styled-components';
@@ -21,7 +22,11 @@ const ArtistCarrer: FC<ArtistCarrerProps> = ({
         <HeadTitle>Carrer</HeadTitle>
       </Head>
       <Introduction>{carrer}</Introduction>
-      <SocialLinks></SocialLinks>
+      <SocialLinks>
+        <InstagramOutlined />
+        <TwitterOutlined />
+        <TwitterOutlined />
+      </SocialLinks>
     </Wrapper>
   );
 };
@@ -29,6 +34,7 @@ const ArtistCarrer: FC<ArtistCarrerProps> = ({
 export default ArtistCarrer;
 
 const Wrapper = styled.div`
+  height: 12.5rem;
   width: 70%;
   padding: 0.625rem;
   background: linear-gradient(
@@ -60,4 +66,13 @@ const Introduction = styled.p`
 
 const SocialLinks = styled.div`
   display: flex;
+  margin-top: 1.5625rem;
+  padding: 0 3rem;
+  justify-content: space-between;
+
+  svg {
+    color: white;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 `;

@@ -51,6 +51,7 @@ const ArtistInfo: FC<ArtistInfoProps> = ({
 export default ArtistInfo;
 
 const Wrapper = styled.div`
+  height: 12.5rem;
   width: 70%;
   padding: 0.625rem;
   background: linear-gradient(

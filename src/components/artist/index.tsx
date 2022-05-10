@@ -20,7 +20,10 @@ const Artist: FC<ArtistProps> = ({ id }) => {
           indicator={() => null}
         >
           <Swiper.Item
-            style={{ paddingRight: '.9375rem', paddingBottom: '.9375rem' }}
+            style={{
+              paddingRight: '.9375rem',
+              paddingBottom: '.9375rem',
+            }}
           >
             <ArtistInfo
               name="Lily Son"
@@ -32,7 +35,10 @@ const Artist: FC<ArtistProps> = ({ id }) => {
             />
           </Swiper.Item>
           <Swiper.Item
-            style={{ paddingRight: '.9375rem', paddingBottom: '.9375rem' }}
+            style={{
+              paddingRight: '.9375rem',
+              paddingBottom: '.9375rem',
+            }}
           >
             <ArtistCarrer carrer="Artist carrer formatting" />
           </Swiper.Item>
