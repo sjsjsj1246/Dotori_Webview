@@ -32,7 +32,7 @@ const artwork: Artwork = {
   artist: 'by Artist name',
   description: '',
   content:
-    'Artwork description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquiq ex ea commodo consequat.',
+    'Artwork description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquiq ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquiq ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut aliquiq ex ea commodo consequat.',
   like: 2700,
   price: 1000000,
   size: 'oil on canvas | 00.0 x 00.0 (cm)',
@@ -152,11 +152,14 @@ const ButtonListItem = styled.div`
   & + & {
     margin-left: 0.625rem;
   }
+
   svg {
     width: 1.25rem;
     height: 1.25rem;
   }
+
   p {
+    margin-top: 0.375rem;
     text-align: center;
     font-size: 0.5rem;
   }

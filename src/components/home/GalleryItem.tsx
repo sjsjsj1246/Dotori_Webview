@@ -6,6 +6,7 @@ import {
 } from '@ant-design/icons';
 import { Avatar, Button } from '@components/common';
 import { HeartFill } from 'antd-mobile-icons';
+import { useRouter } from 'next/router';
 import { FC } from 'react';
 import styled from 'styled-components';
 
@@ -25,46 +26,55 @@ const GalleryItem: FC<GalleryItemProps> = ({
   isBookmarked,
   onToggleLike,
   onToggleBookmark,
-}) => (
-  <Wrapper>
-    <Background image={image}>
-      <CardBottom>
-        <Title>
-          <TitleLeft>
-            <p className="title">Artwork Title</p>
-            <p className="name">by Artist Name</p>
-          </TitleLeft>
-          <TitleAvatar src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9" />
-        </Title>
-        <Description>“a brief introduction about the artwork”</Description>
-        <Info>
-          <p>oil on canvas</p>
-          <p>00.0 x 00.0(cm)</p>
-          <p>₩1,000,000</p>
-        </Info>
-        <ButtonWrapper>
-          <Icon onClick={() => onToggleLike(id)}>
-            {isLiked ? (
-              <HeartFill style={{ color: 'red' }} />
-            ) : (
-              <HeartOutlined />
-            )}
-            <p className="label">2.7k</p>
-          </Icon>
-          <Icon onClick={() => onToggleBookmark(id)}>
-            {isBookmarked ? <TagFilled /> : <TagOutlined />}
-            <p className="label">4.8k</p>
-          </Icon>
-          <Icon>
-            <MessageOutlined />
-            <p className="label">1.2k</p>
-          </Icon>
-          <Button>Purchase/Inquiry</Button>
-        </ButtonWrapper>
-      </CardBottom>
-    </Background>
-  </Wrapper>
-);
+}) => {
+  const router = useRouter();
+
+  return (
+    <Wrapper>
+      <Background image={image}>
+        <CardBottom>
+          <Title>
+            <TitleLeft>
+              <p className="title">Artwork Title</p>
+              <p className="name">by Artist Name</p>
+            </TitleLeft>
+            <TitleAvatar
+              src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+              onClick={() => router.push('/artist/1')}
+            />
+          </Title>
+          <Description>“a brief introduction about the artwork”</Description>
+          <Info>
+            <p>oil on canvas</p>
+            <p>00.0 x 00.0(cm)</p>
+            <p>₩1,000,000</p>
+          </Info>
+          <ButtonWrapper>
+            <Icon onClick={() => onToggleLike(id)}>
+              {isLiked ? (
+                <HeartFill style={{ color: 'red' }} />
+              ) : (
+                <HeartOutlined />
+              )}
+              <p className="label">2.7k</p>
+            </Icon>
+            <Icon onClick={() => onToggleBookmark(id)}>
+              {isBookmarked ? <TagFilled /> : <TagOutlined />}
+              <p className="label">4.8k</p>
+            </Icon>
+            <Icon onClick={() => router.push('/artwork/1')}>
+              <MessageOutlined />
+              <p className="label">1.2k</p>
+            </Icon>
+            <Button onClick={() => router.push('/artwork/1')}>
+              Purchase/Inquiry
+            </Button>
+          </ButtonWrapper>
+        </CardBottom>
+      </Background>
+    </Wrapper>
+  );
+};
 
 export default GalleryItem;
 

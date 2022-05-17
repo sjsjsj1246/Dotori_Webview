@@ -33,7 +33,6 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
-  padding-left: 1rem;
   font-family: bold;
   font-size: 1.5rem;
 `;
