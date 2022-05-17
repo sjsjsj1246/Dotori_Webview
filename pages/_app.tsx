@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import GlobalStyle from '../src/styles/globalStyles.js';
 
-const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => {
+const WrappedApp: any = ({ Component, pageProps }) => {
   const queryClient = new QueryClient();
   return (
     <StyledThemeProvider>
